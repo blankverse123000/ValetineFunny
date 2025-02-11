@@ -10,10 +10,10 @@ const App = () => {
     "Really Sure?",
     "Are you positive ? ",
     "Pookie please...",
-    "Just think about it",
-    "If you say No, I will be really sad",
-    "I will be very sad",
-    "I will be very very sad",
+    "Just think about it!",
+    "If you say No, I will be really sad...",
+    "I will be very sad!..",
+    "I will be very very sad...",
   ];
 
   const [count, setCount] = useState(0);
@@ -37,12 +37,16 @@ const App = () => {
     <div className=" min-h-screen flex flex-col gap-8 justify-center items-center ">
       <h1
         className={` text-red-500  font-serif font-bold ${
-          positive ? "text-3xl" : " text-base"
+          positive ? "text-2xl" : " text-base"
         }`}
       >
         {positive ? "Knew you would say yes!" : "Will you be my Valentine ?"}
       </h1>
-      <div className={`${positive ? "hidden" : ""}  flex  gap-4 items-center`}>
+      <div
+        className={`${positive ? "hidden" : ""}  ${
+          count >= 300 && count <= 400 && " flex-col"
+        } flex  gap-4 items-center`}
+      >
         <button
           style={{
             width: count ? count + "px" : "auto",
