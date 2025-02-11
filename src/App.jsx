@@ -35,7 +35,11 @@ const App = () => {
 
   return (
     <div className=" min-h-screen flex flex-col gap-8 justify-center items-center ">
-      <h1 className=" text-red-500 text-3xl font-serif font-bold">
+      <h1
+        className={` text-red-500  font-serif font-bold ${
+          positive ? "text-3xl" : " text-base"
+        }`}
+      >
         {positive ? "Knew you would say yes!" : "Will you be my Valentine ?"}
       </h1>
       <div className={`${positive ? "hidden" : ""}  flex  gap-4 items-center`}>
